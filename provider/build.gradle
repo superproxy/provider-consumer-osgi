@@ -16,14 +16,14 @@ dependencies {
 
 
 jar {
-    from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+//    from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
     manifest {
         version = '1.0.0'
         name = 'provider activiator'
         attributes( 'Built-By': gradle.gradleVersion )
         instruction 'Bundle-Activator', 'com.github.superproxy.gradle.single.provider.ProviderBundleActivator'
         instruction 'Import-Package', '*'
-        instruction 'Export-Package', 'com.github.superproxy.gradle.*'
+//        instruction 'Export-Package', 'com.github.superproxy.gradle.*'
 //        instruction 'Embed-Transitive', 'true'
 //        instruction 'Conditional-Package', 'com.github.superproxy.gradle.*'
 //        instruction 'Private-Package', 'com.github.superproxy.gradle.*'

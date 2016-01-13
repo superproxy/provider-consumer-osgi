@@ -14,7 +14,7 @@ public class App {
 
         try {
 
-            // 添加基础类
+            // add  base lib
             Thread.currentThread().setContextClassLoader(new FileSystemClassLoader("."));
 
             // Initialize Apache Felix Framework
@@ -28,10 +28,10 @@ public class App {
             Bundle api = context.installBundle("file:api/build/libs/api-1.0.jar");
             Bundle provider = context.installBundle("file:provider/build/libs/provider-1.0.jar");
 
-            Bundle consumer = context.installBundle("file:client/build/libs/client-1.0.jar");
+            Bundle consumer = context.installBundle("file:consumer/build/libs/consumer-1.0.jar");
             // Start and stop framework and bundles
             framework.start();
-            api.start();
+//            api.start();  //不需要启动，class静态加载了
             provider.start();
             consumer.start();
 
