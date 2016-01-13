@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-Description: Core Implementation of LD Path a simple path-based
+  query language similar to XPath or SPARQL Property Paths that is par
+ ticularly well-suited for querying and retrieving resources from the 
+ Linked Data Cloud by following RDF links between resources and server
+ s.
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: swing-osgi.provider
+Bundle-Category: osgi
+Built-By: 2.5
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1452586900632
+Bundle-DocURL: http://code.google.com/p/ldpath/
+Import-Package: com.github.superproxy.gradle.single.api,org.osgi.frame
+ work;version="[1.8,2)"
+Tool: Bnd-2.1.0.20130426-122213
+Conditional-Package: com.github.superproxy.gradle.*
+Export-Package: com.github.superproxy.gradle.single.provider;uses:="co
+ m.github.superproxy.gradle.single.api,org.osgi.framework"
+Bundle-Name: provider activiator
+Bundle-Version: 1.0.0
+Bundle-Activator: com.github.superproxy.gradle.single.provider.ProviderBundleActivator
+Embed-Transitive: true
+Created-By: 1.8.0_25 (Oracle Corporation)

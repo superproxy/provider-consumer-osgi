@@ -1,0 +1,6 @@
+rootProject.name = 'consumer-provider-osgi'
+
+include "main"
+include "api"
+include "provider"
+include "consumer"

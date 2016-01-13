@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Export-Package: com.github.superproxy.gradle.single.provider.consumer;
+ uses:="com.github.superproxy.gradle.single.provider.api,org.osgi.fram
+ ework"
+Bundle-SymbolicName: swing-osgi.client
+Bundle-Version: 1.0.0
+Bundle-Name: consumer activiator
+Built-By: 2.5
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1452583458159
+Bundle-Activator: com.github.superproxy.gradle.single.consumer.ConsumerBundleActivator
+Import-Package: com.github.superproxy.gradle.single.provider.api,org.o
+ sgi.framework;version="[1.8,2)",org.osgi.util.tracker;version="[1.5,2
+ )"
+Created-By: 1.8.0_25 (Oracle Corporation)
+Tool: Bnd-2.1.0.20130426-122213
+

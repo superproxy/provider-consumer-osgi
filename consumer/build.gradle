@@ -1,0 +1,21 @@
+apply plugin: 'osgi'
+
+dependencies {
+    compile project(':api')
+    compile 'org.apache.felix:org.apache.felix.framework:5.4.0'
+    testCompile 'junit:junit:4.12'
+}
+
+
+
+jar {
+//    from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    manifest {
+        version = '1.0.0'
+        name = 'consumer activiator'
+        instruction 'Bundle-Activator', 'com.github.superproxy.gradle.single.consumer.ConsumerBundleActivator'
+        instruction 'Import-Package', '*'
+//        instruction 'Export-Package', '*'
+        attributes('Built-By': gradle.gradleVersion)
+    }
+}

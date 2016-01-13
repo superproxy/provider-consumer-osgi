@@ -1,0 +1,29 @@
+apply plugin: 'osgi'
+
+dependencies {
+    compile 'org.apache.felix:org.apache.felix.framework:5.4.0'
+    testCompile 'junit:junit:4.12'
+}
+
+
+jar {
+//    from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    manifest {
+        version = '1.0.0'
+        name = 'api activiator'
+        attributes('Built-By': gradle.gradleVersion)
+        instruction 'Bundle-Activator', 'com.github.superproxy.gradle.single.api.ApiBundle'
+        instruction 'Import-Package', '*'
+        instruction 'Export-Package', 'com.github.superproxy.gradle.*'
+//        instruction 'Embed-Transitive', 'true'
+//        instruction 'Conditional-Package', 'com.github.superproxy.gradle.*'
+//        instruction 'Private-Package', 'com.github.superproxy.gradle.*'
+//        instruction 'Bundle-Category', 'osgi'
+//        instruction 'Embed-Dependency',
+//                'api',
+//                'org.apache.felix.framework'
+        instruction 'Bundle-Description', 'Core Implementation of LD Path a simple path-based query language similar to XPath or SPARQL Property Paths that is particularly well-suited for querying and retrieving resources from the Linked Data Cloud by following RDF links between resources and servers.'
+        instruction 'Bundle-DocURL', 'http://code.google.com/p/ldpath/'
+        instruction 'Bundle-License', 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    }
+}

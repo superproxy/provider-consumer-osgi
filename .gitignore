@@ -1,0 +1,5 @@
+settings.gradle
+.idea
+/.gradle
+*.iml
+/gradle.properties
